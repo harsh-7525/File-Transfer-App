@@ -15,7 +15,7 @@ const emailForm= document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
-const host =" https://sharethisfile.herokuapp.com/"  //it will change after backend
+const host =" https://inshare-files.herokuapp.com/"  //it will change after backend
 const uploadURL = host + "api/files"; //gateway
 //const uploadURL = host + "api/files";  //for email, vid 56.15min
 const emailURL = host + "api/files/send";  //2:24 hr
