@@ -1,3 +1,7 @@
 browseBtn is replaced with --- browsebtn
 fileInput is replaced with --- fileinput
 onuploadprogress is replaced with ---showLink
+
+
+Backend host: https://inshare-files.herokuapp.com
+Front-end: https://trusting-haibt-6edb30.netlify.app/
