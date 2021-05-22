@@ -9,6 +9,7 @@ body, html{
    height: 100%;
    padding: 0;
    margin: 0;
+   overflow: hidden;
 }
 
 body, .drop-zone, .upload-container{
@@ -19,6 +20,9 @@ body, .drop-zone, .upload-container{
     
 }
 
+body{
+    flex-direction: row;
+}
 .upload-container{
     background: #ffffff;
     border-radius: 25px;
@@ -105,5 +109,122 @@ body, .drop-zone, .upload-container{
 .progress-container .inner-container{
     position: absolute;
     z-index: 1;
-    margin: 10px;
+    margin: 40px;
+}
+
+.sharing-container{
+    width: var(--container-width);
+    margin-bottom: 20px;
+    display: none;
+    
+}
+
+p{
+    opacity: .7;
+    text-align:center;
+}
+
+.sharing-container .input-container{
+    position: relative;
+}
+
+.sharing-container .input-container input{
+    width: 100%;
+    border: 2px dashed var(--border-color);
+    border-radius: 3px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 20px;
+    background: rgb(250, 208, 229);
+   
+}
+
+.input-container img{
+    position: absolute;
+    height: 22px;
+    width: 30px;
+right: 7px;
+top: 12px;
+cursor: pointer;
+
+}
+
+.email-container{
+    display: flex;
+    align-items: center;
+}
+
+.email-container form{
+    width: 100%;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.email-container .field{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 400px;
+}
+
+.email-container label{
+    font-size: 18px;
+}
+
+.email-container input{
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    text-align: center;
+}
+
+.email-container input:focus{
+    outline: none;
+}
+
+.email-container button{
+    font-size: 18px;
+    padding: 8px 40px;
+    margin-top: 15px;
+    background: var(--main-bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toast{
+    position: absolute;
+    bottom: 10px;
+ 
+    transform: translateX(-50%, 60px);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgb(252, 145, 204);
+    transition: transform ease-in-out 0.2s;
+    font-size: 18px;
+}
+
+.upload-vector{
+    background: url(./uploadbg.svg) no-repeat center;
+    background-size: contain;
+    height: 50vh;
+    width: 50vw;
+}
+
+@media screen and (max-width: 900px){
+    :root{
+        --container-width:320px;
+
+    }
+    .upload-vector{
+        display: none;
+    }
+    .email-container .field{
+        flex-direction:column;
+        width: 300px;
+    }
 }
